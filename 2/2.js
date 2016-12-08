@@ -1,68 +1,68 @@
-'use strict';
+'use strict'
 
-let inp = 'RRLUDDLDUDUDUDRDDDRDDRLUUUDRUDURURURLRDDULLLDRRRRULDDRDDURDLURLURRUULRURDDDDLDDRRLDUDUUDURURDLDRRURDLLLDLLRUDRLDDRUULLLLLRRLDUDLUUDRUULLRLLLRLUURDLDLLDDRULDLUURRURLUUURLLDDULRDULULRULDDLRDDUUDLRRURLLURURLDDLURRLUURRRRLDRDLDUDRUDDRULLDUDDLRRLUUUUUDDLLDRLURDDRLLUDULDRDDLLUURUUUURDRLRLLULUULULLRRDLULRUDURDLRLRDDDRULLUULRURULLLUDUURUUUURUULDURDRRRULRLULDLRRULULUUDDDRDURLLURLLDUUUUDULRDLRDUUDDLDUDRLLRLRRRLULUDDDURLRRURUDDDRDRDRLLRDRDLDDRRDRDLLRLLLRRULRDDURRDUDRURDLDULLRRLURLRLLDURRRLLDRRURRRUULDRLDUULRDLDLURUDLLDLLUUDDDUUUDRL-DLRRDRRDDRRDURLUDDDDDULDDLLDRLURDDDDDDRDDDRDDDLLRRULLLRUDULLDURULRRDLURURUDRUURDRLUURRUDRUULUURULULDDLLDDRLDUDDRDRDDUULDULDDLUDUDDUDLULLUDLLLLLRRRUURLUUUULRURULUDDULLLRLRDRUUULULRUUUULRDLLDLDRDRDRDRRUUURULDUUDLDRDRURRUDDRLDULDDRULRRRLRDDUUDRUDLDULDURRDUDDLULULLDULLLRRRDULLLRRURDUURULDRDURRURRRRDLDRRUDDLLLDRDRDRURLUURURRUUURRUDLDDULDRDRRURDLUULDDUUUURLRUULRUURLUUUDLUDRLURUDLDLDLURUURLDURDDDDRURULLULLDRDLLRRLDLRRRDURDULLLDLRLDR-URURLLDRDLULULRDRRDDUUUDDRDUURULLULDRLUDLRUDDDLDRRLURLURUUDRLDUULDRDURRLLUDLDURRRRLURLDDRULRLDULDDRRLURDDRLUDDULUDULRLDULDLDUDRLLDDRRRDULLDLRRLDRLURLUULDDDDURULLDLLLDRRLRRLLRDDRDLDRURRUURLLDDDLRRRRRDLRRDRLDDDLULULRLUURULURUUDRULRLLRDLDULDRLLLDLRRRUDURLUURRUDURLDDDRDRURURRLRRLDDRURULDRUURRLULDLUDUULDLUULUDURRDDRLLLRLRRLUUURRDRUULLLRUUURLLDDRDRULDULURRDRURLRRLRDURRURRDLDUDRURUULULDDUDUULDRDURRRDLURRLRLDUDRDULLURLRRUDLUDRRRULRURDUDDDURLRULRRUDUUDDLLLURLLRLLDRDUURDDLUDLURDRRDLLRLURRUURRLDUUUUDUD-DRRDRRRLDDLDUDRDLRUUDRDUDRRDUDRDURRDDRLLURUUDRLRDDULLUULRUUDDRLDLRULDLRLDUDULUULLLRDLURDRDURURDUDUDDDRRLRRLLRULLLLRDRDLRRDDDLULDLLUUULRDURRULDDUDDDURRDRDRDRULRRRDRUDLLDDDRULRRLUDRDLDLDDDLRLRLRLDULRLLRLRDUUULLRRDLLRDULURRLDUDDULDDRLUDLULLRLDUDLULRDURLRULLRRDRDDLUULUUUULDRLLDRDLUDURRLLDURLLDDLLUULLDURULULDLUUDLRURRRULUDRLDRDURLDUDDULRDRRDDRLRRDDRUDRURULDRRLUURUDULDDDLRRRRDRRRLLURUURLRLULUULLRLRDLRRLLUULLDURDLULURDLRUUDUUURURUURDDRLULUUULRDRDRUUDDDRDRL-RLRUDDUUDDDDRRLRUUDLLDRUUUDRRDLDRLRLLDRLUDDURDLDUDRRUURULLRRLUULLUDRDRUDDULRLLUDLULRLRRUUDLDLRDDDRDDDUDLULDLRRLUDUDDRRRRDRDRUUDDURLRDLLDLDLRRDURULDRLRRURULRDDLLLRULLRUUUDLDUURDUUDDRRRDDRLDDRULRRRDRRLUDDDRUURRDRRDURDRUDRRDLUDDURRLUDUDLLRUURLRLLLDDURUDLDRLRLLDLLULLDRULUURLDDULDDRDDDURULLDRDDLURRDDRRRLDLRLRRLLDLLLRDUDDULRLUDDUULUDLDDDULULDLRDDLDLLLDUUDLRRLRDRRUUUURLDLRRLDULURLDRDURDDRURLDLDULURRRLRUDLDURDLLUDULDDU';
-let tests = ['ULL\nRRDDD\nLURDL\nUUUUD'];
+var inp = 'RRLUDDLDUDUDUDRDDDRDDRLUUUDRUDURURURLRDDULLLDRRRRULDDRDDURDLURLURRUULRURDDDDLDDRRLDUDUUDURURDLDRRURDLLLDLLRUDRLDDRUULLLLLRRLDUDLUUDRUULLRLLLRLUURDLDLLDDRULDLUURRURLUUURLLDDULRDULULRULDDLRDDUUDLRRURLLURURLDDLURRLUURRRRLDRDLDUDRUDDRULLDUDDLRRLUUUUUDDLLDRLURDDRLLUDULDRDDLLUURUUUURDRLRLLULUULULLRRDLULRUDURDLRLRDDDRULLUULRURULLLUDUURUUUURUULDURDRRRULRLULDLRRULULUUDDDRDURLLURLLDUUUUDULRDLRDUUDDLDUDRLLRLRRRLULUDDDURLRRURUDDDRDRDRLLRDRDLDDRRDRDLLRLLLRRULRDDURRDUDRURDLDULLRRLURLRLLDURRRLLDRRURRRUULDRLDUULRDLDLURUDLLDLLUUDDDUUUDRL-DLRRDRRDDRRDURLUDDDDDULDDLLDRLURDDDDDDRDDDRDDDLLRRULLLRUDULLDURULRRDLURURUDRUURDRLUURRUDRUULUURULULDDLLDDRLDUDDRDRDDUULDULDDLUDUDDUDLULLUDLLLLLRRRUURLUUUULRURULUDDULLLRLRDRUUULULRUUUULRDLLDLDRDRDRDRRUUURULDUUDLDRDRURRUDDRLDULDDRULRRRLRDDUUDRUDLDULDURRDUDDLULULLDULLLRRRDULLLRRURDUURULDRDURRURRRRDLDRRUDDLLLDRDRDRURLUURURRUUURRUDLDDULDRDRRURDLUULDDUUUURLRUULRUURLUUUDLUDRLURUDLDLDLURUURLDURDDDDRURULLULLDRDLLRRLDLRRRDURDULLLDLRLDR-URURLLDRDLULULRDRRDDUUUDDRDUURULLULDRLUDLRUDDDLDRRLURLURUUDRLDUULDRDURRLLUDLDURRRRLURLDDRULRLDULDDRRLURDDRLUDDULUDULRLDULDLDUDRLLDDRRRDULLDLRRLDRLURLUULDDDDURULLDLLLDRRLRRLLRDDRDLDRURRUURLLDDDLRRRRRDLRRDRLDDDLULULRLUURULURUUDRULRLLRDLDULDRLLLDLRRRUDURLUURRUDURLDDDRDRURURRLRRLDDRURULDRUURRLULDLUDUULDLUULUDURRDDRLLLRLRRLUUURRDRUULLLRUUURLLDDRDRULDULURRDRURLRRLRDURRURRDLDUDRURUULULDDUDUULDRDURRRDLURRLRLDUDRDULLURLRRUDLUDRRRULRURDUDDDURLRULRRUDUUDDLLLURLLRLLDRDUURDDLUDLURDRRDLLRLURRUURRLDUUUUDUD-DRRDRRRLDDLDUDRDLRUUDRDUDRRDUDRDURRDDRLLURUUDRLRDDULLUULRUUDDRLDLRULDLRLDUDULUULLLRDLURDRDURURDUDUDDDRRLRRLLRULLLLRDRDLRRDDDLULDLLUUULRDURRULDDUDDDURRDRDRDRULRRRDRUDLLDDDRULRRLUDRDLDLDDDLRLRLRLDULRLLRLRDUUULLRRDLLRDULURRLDUDDULDDRLUDLULLRLDUDLULRDURLRULLRRDRDDLUULUUUULDRLLDRDLUDURRLLDURLLDDLLUULLDURULULDLUUDLRURRRULUDRLDRDURLDUDDULRDRRDDRLRRDDRUDRURULDRRLUURUDULDDDLRRRRDRRRLLURUURLRLULUULLRLRDLRRLLUULLDURDLULURDLRUUDUUURURUURDDRLULUUULRDRDRUUDDDRDRL-RLRUDDUUDDDDRRLRUUDLLDRUUUDRRDLDRLRLLDRLUDDURDLDUDRRUURULLRRLUULLUDRDRUDDULRLLUDLULRLRRUUDLDLRDDDRDDDUDLULDLRRLUDUDDRRRRDRDRUUDDURLRDLLDLDLRRDURULDRLRRURULRDDLLLRULLRUUUDLDUURDUUDDRRRDDRLDDRULRRRDRRLUDDDRUURRDRRDURDRUDRRDLUDDURRLUDUDLLRUURLRLLLDDURUDLDRLRLLDLLULLDRULUURLDDULDDRDDDURULLDRDDLURRDDRRRLDLRLRRLLDLLLRDUDDULRLUDDUULUDLDDDULULDLRDDLDLLLDUUDLRRLRDRRUUUURLDLRRLDULURLDRDURDDRURLDLDULURRRLRUDLDURDLLUDULDDU'
+var tests = [ 'ULL\nRRDDD\nLURDL\nUUUUD' ]
 
-let rules = inp.split('-');
-let code = '';
+var rules = inp.split('-')
+var code = ''
 
 class NumberPad {
-    constructor() {
-        this.curr = 5;
-    }
+  constructor () {
+    this.curr = 5
+  }
 
-    getCurr() {
-        return this.curr;
-    }
+  getCurr () {
+    return this.curr
+  }
 
-    left() {
-        if (this.curr === 1 || this.curr === 4 || this.curr === 7) {
-        } else {
-            this.curr -= 1;
-        }
+  left () {
+    if (this.curr === 1 || this.curr === 4 || this.curr === 7) {
+    } else {
+      this.curr -= 1
     }
+  }
 
-    right() {
-        if (this.curr === 3 || this.curr === 6 || this.curr === 9) {
-        } else {
-            this.curr += 1;
-        }
+  right () {
+    if (this.curr === 3 || this.curr === 6 || this.curr === 9) {
+    } else {
+      this.curr += 1
     }
+  }
 
-    up() {
-        if (this.curr === 1 || this.curr === 2 || this.curr === 3) {
-        } else {
-            this.curr -= 3;
-        }
+  up () {
+    if (this.curr === 1 || this.curr === 2 || this.curr === 3) {
+    } else {
+      this.curr -= 3
     }
+  }
 
-    down() {
-        if (this.curr === 7 || this.curr === 8 || this.curr === 9) {
-        } else {
-            this.curr += 3;
-        }
+  down () {
+    if (this.curr === 7 || this.curr === 8 || this.curr === 9) {
+    } else {
+      this.curr += 3
     }
+  }
 }
 
-let pad = new NumberPad();
+var pad = new NumberPad()
 
-for (let i = 0; i < rules.length; i++) {
-    for (let j = 0; j < rules[i].length; j++) {
-        let x = rules[i][j];
-        if (x === 'U') {
-            pad.up();
-        } else if (x === 'D') {
-            pad.down();
-        } else if (x === 'L') {
-            pad.left();
-        } else if (x === 'R') {
-            pad.right();
-        }
+for (var i = 0; i < rules.length; i++) {
+  for (var j = 0; j < rules[ i ].length; j++) {
+    var x = rules[ i ][ j ]
+    if (x === 'U') {
+      pad.up()
+    } else if (x === 'D') {
+      pad.down()
+    } else if (x === 'L') {
+      pad.left()
+    } else if (x === 'R') {
+      pad.right()
     }
-    code += pad.getCurr();
+  }
+  code += pad.getCurr()
 }
 
-console.log('Part 1:', code);
+console.log('Part 1:', code)
 
 /*
  *     1
@@ -73,88 +73,88 @@ console.log('Part 1:', code);
  */
 
 class GrossPad {
-    constructor() {
-        this.curr = 5;
-    }
+  constructor () {
+    this.curr = 5
+  }
 
-    getCurr() {
-        return this.curr;
-    }
+  getCurr () {
+    return this.curr
+  }
 
-    left() {
-        if (this.curr === 1 || this.curr === 2 || this.curr === 5 || this.curr === 'A' || this.curr === 'D') {
-        } else if (this.curr === 3 || this.curr === 4 || this.curr === 6 || this.curr === 7 || this.curr === 8 || this.curr === 9) {
-            this.curr -= 1;
-        } else if (this.curr === 'B') {
-            this.curr = 'A';
-        } else if (this.curr === 'C') {
-            this.curr = 'B';
-        }
+  left () {
+    if (this.curr === 1 || this.curr === 2 || this.curr === 5 || this.curr === 'A' || this.curr === 'D') {
+    } else if (this.curr === 3 || this.curr === 4 || this.curr === 6 || this.curr === 7 || this.curr === 8 || this.curr === 9) {
+      this.curr -= 1
+    } else if (this.curr === 'B') {
+      this.curr = 'A'
+    } else if (this.curr === 'C') {
+      this.curr = 'B'
     }
+  }
 
-    right() {
-        if (this.curr === 1 || this.curr === 4 || this.curr === 9 || this.curr === 'C' || this.curr === 'D') {
-        } else if (this.curr === 2 || this.curr === 3 || this.curr === 5 || this.curr === 6 || this.curr === 7 || this.curr === 8) {
-            this.curr += 1;
-        } else if (this.curr === 'A') {
-            this.curr = 'B';
-        } else if (this.curr === 'B') {
-            this.curr = 'C';
-        }
+  right () {
+    if (this.curr === 1 || this.curr === 4 || this.curr === 9 || this.curr === 'C' || this.curr === 'D') {
+    } else if (this.curr === 2 || this.curr === 3 || this.curr === 5 || this.curr === 6 || this.curr === 7 || this.curr === 8) {
+      this.curr += 1
+    } else if (this.curr === 'A') {
+      this.curr = 'B'
+    } else if (this.curr === 'B') {
+      this.curr = 'C'
     }
+  }
 
-    up() {
-        if (this.curr === 1 || this.curr === 4 || this.curr === 2 || this.curr === 5 || this.curr === 9) {
-        } else if (this.curr === 6 || this.curr === 7 || this.curr === 8) {
-            this.curr -= 4;
-        } else if (this.curr === 3) {
-            this.curr = 1;
-        } else if (this.curr === 'A') {
-            this.curr = 6;
-        } else if (this.curr === 'B') {
-            this.curr = 7;
-        } else if (this.curr === 'C') {
-            this.curr = 8;
-        } else if (this.curr === 'D') {
-            this.curr = 'B';
-        }
+  up () {
+    if (this.curr === 1 || this.curr === 4 || this.curr === 2 || this.curr === 5 || this.curr === 9) {
+    } else if (this.curr === 6 || this.curr === 7 || this.curr === 8) {
+      this.curr -= 4
+    } else if (this.curr === 3) {
+      this.curr = 1
+    } else if (this.curr === 'A') {
+      this.curr = 6
+    } else if (this.curr === 'B') {
+      this.curr = 7
+    } else if (this.curr === 'C') {
+      this.curr = 8
+    } else if (this.curr === 'D') {
+      this.curr = 'B'
     }
+  }
 
-    down() {
-        if (this.curr === 5 || this.curr === 'A' || this.curr === 'D' || this.curr === 'C' || this.curr === 9) {
-        } else if (this.curr === 1) {
-            this.curr = 3;
-        } else if (this.curr === 2 || this.curr === 3 || this.curr === 4) {
-            this.curr += 4;
-        } else if (this.curr === 6) {
-            this.curr = 'A';
-        } else if (this.curr === 7) {
-            this.curr = 'B';
-        } else if (this.curr === 8) {
-            this.curr = 'C';
-        } else if (this.curr === 'B') {
-            this.curr = 'D';
-        }
+  down () {
+    if (this.curr === 5 || this.curr === 'A' || this.curr === 'D' || this.curr === 'C' || this.curr === 9) {
+    } else if (this.curr === 1) {
+      this.curr = 3
+    } else if (this.curr === 2 || this.curr === 3 || this.curr === 4) {
+      this.curr += 4
+    } else if (this.curr === 6) {
+      this.curr = 'A'
+    } else if (this.curr === 7) {
+      this.curr = 'B'
+    } else if (this.curr === 8) {
+      this.curr = 'C'
+    } else if (this.curr === 'B') {
+      this.curr = 'D'
     }
+  }
 }
 
-pad = new GrossPad();
-code = '';
+pad = new GrossPad()
+code = ''
 
-for (let i = 0; i < rules.length; i++) {
-    for (let j = 0; j < rules[i].length; j++) {
-        let x = rules[i][j];
-        if (x === 'U') {
-            pad.up();
-        } else if (x === 'D') {
-            pad.down();
-        } else if (x === 'L') {
-            pad.left();
-        } else if (x === 'R') {
-            pad.right();
-        }
+for (var i = 0; i < rules.length; i++) {
+  for (var j = 0; j < rules[ i ].length; j++) {
+    var x = rules[ i ][ j ]
+    if (x === 'U') {
+      pad.up()
+    } else if (x === 'D') {
+      pad.down()
+    } else if (x === 'L') {
+      pad.left()
+    } else if (x === 'R') {
+      pad.right()
     }
-    code += pad.getCurr();
+  }
+  code += pad.getCurr()
 }
 
-console.log('Part 2:', code);
+console.log('Part 2:', code)
