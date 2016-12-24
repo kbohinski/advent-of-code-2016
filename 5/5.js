@@ -1,33 +1,33 @@
 'use strict'
 
-var md5 = require('crypto-js/md5')
-var ProgressBar = require('progress')
+let md5 = require('crypto-js/md5')
+let ProgressBar = require('progress')
 
-var bar = new ProgressBar('Finding Hashes [:bar] :elapsed', {
+let bar = new ProgressBar('Finding Hashes [:bar] :elapsed', {
   total: 40,
   complete: '=',
-  incomplete: ' ',
+  incomplete: ' '
 })
 
-var inp = 'ugkcyxxp'
-var password = ''
-var password2 = [ '_', '_', '_', '_', '_', '_', '_', '_' ]
-var numFound = 0
+let inp = 'ugkcyxxp'
+let password = ''
+let password2 = ['_', '_', '_', '_', '_', '_', '_', '_']
+let numFound = 0
 
-var i = 0
+let i = 0
 while (true) {
   if (i % 980000 === 0) {
     bar.tick()
   }
-  var hash = md5(inp + i).toString()
+  let hash = md5(inp + i).toString()
   if (hash.substring(0, 5) === '00000') {
     if (password.length < 8) {
-      password += hash[ 5 ]
+      password += hash[5]
     }
-    var index = parseInt(hash[ 5 ])
-    if (index <= 7 && index >= 0 && password2[ index ] === '_') {
+    let index = parseInt(hash[5])
+    if (index <= 7 && index >= 0 && password2[index] === '_') {
       numFound += 1
-      password2[ index ] = hash[ 6 ]
+      password2[index] = hash[6]
       if (numFound === 8) {
         break
       }
