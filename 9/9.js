@@ -13,57 +13,29 @@ let tests = [
   {'str': '(25x3)(3x3)ABC(2x3)XY(5x2)PQRSTX(18x9)(3x2)TWO(5x7)SEVEN', 'expected': 445, 'recurse': true},
 ]
 
-// TESTS
-let test = true
-let testP2 = true
-
-function decompress (str, recurse) {
-  let decompressed = ''
-
-  for (let i = 0; i < str.length; i++) {
-    if (str.charAt(i) === '(') {
-      let marker = ''
-      i += 1
-      while (str.charAt(i) !== ')') {
-        marker += str.charAt(i)
-        i += 1
-      }
-      i += 1
-      marker = marker.split('x')
-      let part = str.substring(i, (i + parseInt(marker[0])))
-      if (!recurse) {
-        decompressed += part.repeat(parseInt(marker[1]))
-      } else {
-        decompressed += decompress(part, true).repeat(parseInt(marker[1]))
-      }
-      i = (i + parseInt(marker[0]) - 1)
-    } else {
-      decompressed += str.charAt(i)
-    }
+// Inspired by https://raw.githubusercontent.com/monk-time/advent-of-code/master/2016/aoc09-no-loop.js
+// Really clever use of //g.exec() ...
+function decompress (s, rec, sum) {
+  let {0: m, 1: n, 2: by, index} = /\((\d+)x(\d+)\)/g.exec(s) || []
+  if (!m) {
+    return sum + s.length
   }
-
-  return decompressed
+  let end = index + m.length + (+n)
+  let len = +by * (rec ? decompress(s.slice(end - +n, end), rec, 0) : +n);
+  return decompress(s.slice(end), rec, (sum + index + len))
 }
 
-if (test) {
-  for (let i = 0; i < tests.length; i++) {
-    if (!testP2 && tests[i].recurse) {
-      break
-    }
-    let result = decompress(tests[i].str, tests[i].recurse)
-    if (result.length === tests[i].expected) {
-      console.log('TEST', i, 'PASSED')
-    } else {
-      console.log('TEST', i, 'FAILED')
-      console.log('  GOT', result.length, ' EXPECTED', tests[i].expected)
-      console.log(tests[i].str)
-      console.log(result)
-    }
-    console.log('')
+for (let i = 0; i < tests.length; i++) {
+  let result = decompress(tests[i].str, tests[i].recurse, 0)
+  if (result === tests[i].expected) {
+    console.log('TEST', i, 'PASSED')
+  } else {
+    console.log('TEST', i, 'FAILED')
+    console.log('  GOT', result, ' EXPECTED', tests[i].expected)
+    console.log(tests[i].str)
   }
-  process.exit(0)
+  console.log('')
 }
 
-console.log('Part 1:', decompress(inp, false).length)
-console.log('Part 2:', decompress(inp, true).length)
-
+console.log('Part 1:', decompress(inp, false, 0))
+console.log('Part 2:', decompress(inp, true, 0))
