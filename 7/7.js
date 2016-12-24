@@ -54,8 +54,6 @@ function supportsSSL (ip) {
           for (let k = 0; k < outside.length; k++) {
             if (inside[j].innerChar === outside[k].outerChar && inside[j].outerChar === outside[k].innerChar) {
               return true
-            } else {
-              //console.log(inside[j].innerChar, outside[k].outerChar, inside[j].innerChar, outside[k].innerChar)
             }
           }
         }
